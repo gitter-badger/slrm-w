@@ -12,11 +12,11 @@ http.createServer(function (req, res) {
 console.log('Server is listening on 3000');
 
 // Reading Jobs from file
-fs.readFile('res/test', 'utf8', (err, data) => {
+fs.readFile('out/test', 'utf8', (err, data) => {
     if (err) throw err;
     jdata = data.toString().split(',');
     jsonstring = JSON.stringify(jdata).split("\\n");
-    fs.writeFile('res/data.json', jsonstring);
+    fs.writeFile('out/data.json', jsonstring);
     console.log(jsonstring);
 });
 
