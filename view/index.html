@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+        <title>LFT-Cluster</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+        <h1 class="jumbotron">Cluster</h1>
+        <table class="table">
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">JOBNAME</th>
+                <th scope="col">USER</th>
+                <th scope="col">NODE</th>
+                <th scope="col">CPUS</th>
+                <th scope="col">START</th>
+                <th scope="col">STATE</th>
+                <th scope="col">ERROR</th>
+                </thead>
+                <tbody ng-app="slrmw">
+                    <tr ng-repeat="x in jobs | orderBy : 'id'">
+                        <td>{{ x.id }}</td>
+                        <td>{{ x.name }}</td>
+                        <td>{{ x.user }}</td>
+                        <td>{{ x.node }}</td>
+                        <td>{{ x.cpu }}</td>
+                        <td>{{ x.start }}</td>
+                        <td>{{ x.state }}</td>
+                        <td>{{ x.error }}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    </body>
+</html>

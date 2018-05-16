@@ -1,0 +1,22 @@
+{
+  "name": "slrm-w",
+  "version": "1.0.0",
+  "description": "Web overview for slurm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxhner/slrm-w.git"
+  },
+  "author": "Florian Taut <frntaut@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lxhner/slrm-w/issues"
+  },
+  "homepage": "https://github.com/lxhner/slrm-w#readme",
+  "dependencies": {
+    "angular": "^1.6.10"
+  }
+}
