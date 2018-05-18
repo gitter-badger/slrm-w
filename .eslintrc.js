@@ -10,7 +10,7 @@ module.exports = {
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-newline": "error",
-        "array-bracket-spacing": "error",
+        "array-bracket-spacing": "off",
         "array-callback-return": "error",
         "array-element-newline": "error",
         "arrow-body-style": "error",
@@ -28,7 +28,7 @@ module.exports = {
         "callback-return": "error",
         "camelcase": "error",
         "capitalized-comments": [
-            "error",
+            "warn",
             "always"
         ],
         "class-methods-use-this": "error",
@@ -50,7 +50,7 @@ module.exports = {
         "dot-location": "error",
         "dot-notation": "error",
         "eol-last": [
-            "error",
+            "off",
             "never"
         ],
         "eqeqeq": "error",
@@ -69,7 +69,7 @@ module.exports = {
         "guard-for-in": "error",
         "handle-callback-err": "error",
         "id-blacklist": "error",
-        "id-length": "error",
+        "id-length": "off",
         "id-match": "error",
         "implicit-arrow-linebreak": [
             "error",
@@ -100,14 +100,14 @@ module.exports = {
         "max-lines": "error",
         "max-nested-callbacks": "error",
         "max-params": "error",
-        "max-statements": "error",
+        "max-statements": "off",
         "max-statements-per-line": "error",
         "multiline-comment-style": "error",
         "multiline-ternary": "error",
         "new-cap": "error",
         "new-parens": "error",
         "newline-after-var": [
-            "error",
+            "off",
             "always"
         ],
         "newline-before-return": "error",
@@ -131,7 +131,7 @@ module.exports = {
         "no-extend-native": "error",
         "no-extra-bind": "error",
         "no-extra-label": "error",
-        "no-extra-parens": "error",
+        "no-extra-parens": "off",
         "no-floating-decimal": "error",
         "no-implicit-coercion": "error",
         "no-implicit-globals": "error",
@@ -163,7 +163,7 @@ module.exports = {
         "no-octal-escape": "error",
         "no-param-reassign": "error",
         "no-path-concat": "error",
-        "no-plusplus": "error",
+        "no-plusplus": "off",
         "no-process-env": "error",
         "no-process-exit": "error",
         "no-proto": "error",
@@ -201,6 +201,7 @@ module.exports = {
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-useless-return": "error",
+        "no-undef": "warn",
         "no-var": "off",
         "no-void": "error",
         "no-warning-comments": "error",
@@ -270,6 +271,7 @@ module.exports = {
         "wrap-iife": "error",
         "wrap-regex": "error",
         "yield-star-spacing": "error",
+        "vars-on-top": "off",
         "yoda": "error"
     }
 };
