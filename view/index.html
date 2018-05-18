@@ -2,7 +2,7 @@
     <head>
         <title>LFT-Cluster</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
@@ -16,21 +16,20 @@
                 <th scope="col">CPUS</th>
                 <th scope="col">START</th>
                 <th scope="col">STATE</th>
-                <th scope="col">ERROR</th>
                 </thead>
-                <tbody ng-app="slrmw">
-                    <tr ng-repeat="x in jobs | orderBy : 'id'">
-                        <td>{{ x.id }}</td>
-                        <td>{{ x.name }}</td>
-                        <td>{{ x.user }}</td>
-                        <td>{{ x.node }}</td>
-                        <td>{{ x.cpu }}</td>
-                        <td>{{ x.start }}</td>
-                        <td>{{ x.state }}</td>
-                        <td>{{ x.error }}</td>
+                <tbody ng-app="slrm" ng-controller="slrmctrl">
+                    <tr ng-repeat="x in data | orderBy : 'JOBID'">
+                        <td>{{ x.JOBID }}</td>
+                        <td>{{ x.NAME }}</td>
+                        <td>{{ x.USER }}</td>
+                        <td>{{ x.NODELIST }}</td>
+                        <td>{{ x.CPUS }}</td>
+                        <td>{{ x.STATE }}</td>
+                        <td>{{ x.REASON }}</td>
                     </tr>
                 </tbody>
         </table>
+        <script src="js/controller.js"></script>
     </div>
     </body>
 </html>

@@ -1,34 +1,39 @@
+var express = require('express');
 var fs = require('fs');
-var http = require('http');
+var path = require('path');
+var app = express();
 
 let jsonstring;
 
-// Webserver
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World');
-}).listen(3000);
-console.log('Server is running an listening on port:3000');
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, '/view/index.html'));
+});
+
+var server = app.listen(3000, function () {
+    console.log('Server is running an listening on port:3000');
+});
+
 
 // Reading Jobs from file
 fs.readFile('out/test', 'utf8', (err, data) => {
-  if (err) throw err;
+    if (err) throw err;
 
-  var header = data.split('\n');
-  var jobs = header[0].split(',');
-  var result=[];
+    var header = data.split('\n');
+    var jobs = header[0].split(',');
+    var result = [ ];
 
-  //reading data from the 2nd row
-  for(var i=1;i< (header.length -1);i++)
-  {
-    //taking the data from the row at position i
-    var rdata = header[i].split(',');
-    var obj={};
-    for(var j=0;j<jobs.length;j++)
-    {
-      obj[jobs[j]]=rdata[j]
+    // Reading data from the 2nd row
+    for (var i = 1; i < (header.length - 1); i++) {
+        // Taking the data from the row at position i
+        var rdata = header[i].split(',');
+        var obj = { };
+        for (var j = 0; j < jobs.length; j++) {
+            obj[jobs[j]] = rdata[j];
+        }
+        result.push(obj);
     }
-    result.push(obj);
-  }
-  console.log(result);
+    jsonstring = JSON.stringify(result);
+    fs.writeFile('out/data.json', jsonstring, (err1) => {
+        if (err1) throw err1;
+    });
 });
