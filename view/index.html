@@ -1,12 +1,12 @@
 <html lang="en">
     <head>
-        <title>LFT-Cluster</title>
+        <title>Slurm Weboverview</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
-        <h1 class="jumbotron">Cluster</h1>
+        <h1 class="jumbotron">Slurm Weboverview</h1>
         <table class="table">
             <thead>
                 <th scope="col">#</th>
@@ -14,11 +14,11 @@
                 <th scope="col">USER</th>
                 <th scope="col">NODE</th>
                 <th scope="col">CPUS</th>
-                <th scope="col">START</th>
                 <th scope="col">STATE</th>
+                <th scope="col">REASON</th>
                 </thead>
                 <tbody ng-app="slrm" ng-controller="slrmctrl">
-                    <tr ng-repeat="x in data | orderBy : 'JOBID'">
+                    <tr ng-repeat="x in data">
                         <td>{{ x.JOBID }}</td>
                         <td>{{ x.NAME }}</td>
                         <td>{{ x.USER }}</td>
@@ -29,7 +29,13 @@
                     </tr>
                 </tbody>
         </table>
-        <script src="js/controller.js"></script>
+        <script type="text/javascript" src="/scripts/angular.js"></script>
+        <script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
+    </div>
+    <div class="container">
+        <p>
+            This page is automatically refreshing every 15 minutes!
+        </p>
     </div>
     </body>
 </html>

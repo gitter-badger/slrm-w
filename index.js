@@ -4,13 +4,14 @@ var path = require('path');
 var app = express();
 
 let jsonstring;
+var date = new Date();
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/view/index.html'));
-});
+app.use(express.static('view'));
+app.use('/scripts', express.static(__dirname + '/node_modules/angular/'));
+app.use('/out', express.static(__dirname + '/out/'));
 
 var server = app.listen(3000, function () {
-    console.log('Server is running an listening on port:3000');
+    console.log('INFO: Server started at ' + date + " on Port 3000");
 });
 
 
