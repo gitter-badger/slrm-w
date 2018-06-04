@@ -1,15 +1,18 @@
 angular.module('slrm', []);
 
+/*
+/// OLD VERSION 05-2018 ///
 angular.module('slrm').controller('slrmctrl', ['$scope', '$http', function ($scope, $http) {
     $http.get('/out/data.json')
         .then(function (response) {
             $scope.data = response.data;
         });
 }]);
+*/
 
-/*
+
 angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
-    $scope.refreshInterval = 900; // Sec (15 Minutes)
+    $scope.refreshInterval = 300; // Seconds for refresh (300 / 60 = 5 minutes)
 
     $scope.getData = function () {
         $http.get('/out/data.json')
@@ -31,4 +34,3 @@ angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', fu
     $timeout($scope.getData, $scope.getTimeLeftToRefresh());
 
 }]);
-*/

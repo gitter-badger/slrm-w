@@ -2,18 +2,26 @@
     <head>
         <title>Slurm Weboverview</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
     <body>
+        <!-- Remove for production Release-->
+
         <div class="container">
-        <h1 class="jumbotron">Slurm Weboverview</h1>
+            <div class="alert alert-warning">
+                This project is under development and could still contain bugs.<br />
+                Report bugs here: <a href="https://github.com/FlonTaut/slrm-w">https://github.com/FlonTaut/slrm-w</a>
+            </div>
+            <h1 class="jumbotron">Slurm Weboverview</h1>
         <div class="container">
             <p>
                 This page is automatically refreshing every 15 minutes!
             </p>
         </div>
-        <table class="table">
+        <table class="table table-borderless">
             <thead>
+                <!-- Need to be customized to data.json's format -->
                 <th scope="col">#</th>
                 <th scope="col">JOBNAME</th>
                 <th scope="col">USER</th>
@@ -22,6 +30,7 @@
                 <th scope="col">STATE</th>
                 <th scope="col">REASON</th>
                 </thead>
+                <!-- Customize to fit data.json's format-->
                 <tbody ng-app="slrm" ng-controller="slrmctrl">
                     <tr ng-repeat="x in data">
                         <td>{{ x.JOBID }}</td>
