@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var path = require('path');
 var app = express();
+const config = require('./config');
 
 let jsonstring;
 var date = new Date();
@@ -10,13 +11,13 @@ app.use(express.static('view'));
 app.use('/scripts', express.static(__dirname + '/node_modules/angular/'));
 app.use('/out', express.static(__dirname + '/out/'));
 
-var server = app.listen(3000, function () {
-    console.log('INFO: Server started at ' + date + " on Port 3000");
+var server = app.listen(config.app.port, function () {
+    console.log('INFO: Server started at ' + date + " on port " + config.app.port);
 });
 
 
 // Reading Jobs from file
-fs.readFile('out/test', 'utf8', (err, data) => {
+fs.readFile('out/squeue_text', 'utf8', (err, data) => {
     if (err) throw err;
 
     var header = data.split('\n');
