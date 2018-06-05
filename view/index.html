@@ -5,47 +5,52 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
-    <body>
+    <body style="background-color: #212529; color: white;">
         <!-- Remove for production Release-->
 
         <div class="container">
+            <!--
             <div class="alert alert-warning">
-                This project is under development and could still contain bugs.<br />
-                Report bugs here: <a href="https://github.com/FlonTaut/slrm-w">https://github.com/FlonTaut/slrm-w</a>
-            </div>
-            <h1 class="jumbotron">Slurm Weboverview beta</h1>
-        <div class="container">
-            <p>
-                This page is automatically refreshing every 5 minutes!
-            </p>
+            This project is under development and could still contain bugs.<br />
+            Report bugs here: <a href="https://github.com/FlonTaut/slrm-w">https://github.com/FlonTaut/slrm-w</a>
         </div>
-        <table class="table table-borderless">
-            <thead>
-                <!-- Need to be customized to data.json's format -->
-                <th scope="col">#</th>
-                <th scope="col">JOBNAME</th>
-                <th scope="col">USER</th>
-                <th scope="col">NODE</th>
-                <th scope="col">CPUS</th>
-                <th scope="col">STATE</th>
-                <th scope="col">REASON</th>
-                </thead>
-                <!-- Customize to fit data.json's format-->
-                <tbody ng-app="slrm" ng-controller="slrmctrl">
-                    <tr ng-repeat="x in data">
-                        <td>{{ x.JOBID }}</td>
-                        <td>{{ x.NAME }}</td>
-                        <td>{{ x.USER }}</td>
-                        <td>{{ x.NODELIST }}</td>
-                        <td>{{ x.CPUS }}</td>
-                        <td>{{ x.STATE }}</td>
-                        <td>{{ x.REASON }}</td>
-                    </tr>
-                </tbody>
-        </table>
-        <script type="text/javascript" src="/scripts/angular.js"></script>
-        <script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
+        -->
+    <div class="heady">
+        <h1>Slurm Weboverview beta</h1>
+    </div>
+
+    <!--<div class="container">
+        <p>
+            This page is automatically refreshing every 5 minutes!
+        </p>
+    </div>-->
+    <table class="table table-borderless table-dark">
+        <thead>
+            <!-- Need to be customized to data.json's format -->
+            <th scope="col">#</th>
+            <th scope="col">JOBNAME</th>
+            <th scope="col">USER</th>
+            <th scope="col">NODE</th>
+            <th scope="col">CPUS</th>
+            <th scope="col">STATE</th>
+            <th scope="col">REASON</th>
+        </thead>
+        <!-- Customize to fit data.json's format-->
+        <tbody ng-app="slrm" ng-controller="slrmctrl">
+            <tr ng-repeat="x in data">
+                <td>{{ x.JOBID }}</td>
+                <td>{{ x.NAME }}</td>
+                <td>{{ x.USER }}</td>
+                <td>{{ x.NODELIST }}</td>
+                <td>{{ x.CPUS }}</td>
+                <td>{{ x.STATE }}</td>
+                <td>{{ x.REASON }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript" src="/scripts/angular.js"></script>
+    <script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
     </div>
 
     </body>
-</html>
+    </html>

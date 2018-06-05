@@ -1,3 +1,8 @@
-.alert {
+.heady {
+    height: 160px;
     margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #212529;
+    text-align: center;
+    padding-top: 5%;
 }
