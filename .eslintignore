@@ -1,3 +1,4 @@
 node_modules/*
 view/js/bootstrap.min.js
 out/*
+config.js

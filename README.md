@@ -58,7 +58,7 @@ Al list of all available parameters can be found [here](http://geco.mines.edu/pr
 Next step is to update the ```<table>``` in ```view/index.html```.
 
 #### Customizing
-The listening port is defined in ```config.js```
+The listening port is defined in ```app/config.js```
 
 Please note that you will need to update your ```docker run -p``` command if you change the port.
 
@@ -74,4 +74,3 @@ A complete contribution guide will be added soon!
 slrm-w itself is licensed under the MIT license.
 
 Some node modules are licensed under other free software license.
-

@@ -1,6 +1,6 @@
 {
   "name": "slrm-w",
-  "version": "1.0beta",
+  "version": "1.0.0",
   "description": "Web overview for slurm",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@ angular.module('slrm').controller('slrmctrl', ['$scope', '$http', function ($sco
 */
 
 
-angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+angular.module('slrm').controller('slrmctrl', [ '$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     $scope.refreshInterval = 15; // Sec (15 Minutes)
 
     $scope.getData = function () {
@@ -33,4 +33,5 @@ angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', fu
     // Initial call to start the loop
     $scope.getData();
 
-}]);
+}
+]);

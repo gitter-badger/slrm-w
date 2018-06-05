@@ -27,11 +27,12 @@
     <table class="table table-borderless table-dark">
         <thead>
             <!-- Need to be customized to data.json's format -->
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">JOBNAME</th>
             <th scope="col">USER</th>
             <th scope="col">NODE</th>
             <th scope="col">CPUS</th>
+            <th scope="col">TIME</th>
             <th scope="col">STATE</th>
             <th scope="col">REASON</th>
         </thead>
@@ -43,14 +44,29 @@
                 <td>{{ x.USER }}</td>
                 <td>{{ x.NODELIST }}</td>
                 <td>{{ x.CPUS }}</td>
+                <td>{{ x.SUBMIT_TIME }}</td>
                 <td>{{ x.STATE }}</td>
                 <td>{{ x.REASON }}</td>
             </tr>
         </tbody>
     </table>
-    <script type="text/javascript" src="/scripts/angular.js"></script>
-    <script type="text/javascript" src="js/controller.js" charset="utf-8"></script>
+
     </div>
 
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; 2018 Florian Taut 😎</span><br />
+        <span class="text-muted pull-right">Last refresh at </span><span class="text-muted" id="refreshtime"></span>
+      </div>
+    </footer>
+
+    <script>
+        var date = new Date();
+        var options = { day: "2-digit", month: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit"};
+        document.getElementById("refreshtime").innerHTML = date.toLocaleDateString('de-DE', options);
+    </script>
+
+    <script type="text/javascript" src="/node/angular.js"></script>
+    <script type="text/javascript" src="/app/controller.js" charset="utf-8"></script>
     </body>
     </html>
