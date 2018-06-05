@@ -1,10 +1,10 @@
 {
   "name": "slrm-w",
-  "version": "1.0.0",
+  "version": "1.0beta",
   "description": "Web overview for slurm",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
+    "start": "node index.js",
     "lint": "eslint ."
   },
   "repository": {

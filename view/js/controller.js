@@ -12,7 +12,7 @@ angular.module('slrm').controller('slrmctrl', ['$scope', '$http', function ($sco
 
 
 angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
-    $scope.refreshInterval = 300; // Seconds for refresh (300 / 60 = 5 minutes)
+    $scope.refreshInterval = 15; // Sec (15 Minutes)
 
     $scope.getData = function () {
         $http.get('/out/data.json')
@@ -31,6 +31,6 @@ angular.module('slrm').controller('slrmctrl', ['$scope', '$http', '$timeout', fu
     };
 
     // Initial call to start the loop
-    $timeout($scope.getData, $scope.getTimeLeftToRefresh());
+    $scope.getData();
 
 }]);

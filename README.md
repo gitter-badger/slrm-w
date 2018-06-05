@@ -31,11 +31,11 @@ In this folder the output of the ```squeue```export command.
 #### Creating an export script
 
 On your host machine.
-````bash
+```bash
 touch export_queue.sh
 ```
 Add the following or similar to it:
-````bash
+```bash
 #!/bin/bash
 squeue -o %i,%j,%u,%N,%C,%V,%T,%r > /home/USERNAME/slrm-w/squeue_text
 ```
