@@ -6,6 +6,8 @@
 [![Build Status](https://travis-ci.com/FlonTaut/slrm-w.svg?branch=master)](https://travis-ci.com/FlonTaut/slrm-w)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1e3810dfcafddb91cb6e/maintainability)](https://codeclimate.com/github/FlonTaut/slrm-w/maintainability)
 
+![Preview](https://github.com/FlonTaut/slrm-w/blob/master/res/preview.png?raw=true "Preview")
+
 ## Installing
 ### Using NodeJs
 Download the project and switch to the directory ```cd slrm-w ```
