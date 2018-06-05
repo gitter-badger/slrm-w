@@ -23,7 +23,7 @@ module.exports = {
                 result.push(obj);
             }
             jsonstring = JSON.stringify(result);
-            fs.writeFile('out/data.json', jsonstring, (err1) => {
+            fs.writeFile ('out/data.json', jsonstring, (err1) => {
                 if (err1) throw err1;
                 console.log('INFO: data format completed.');
             });
@@ -34,6 +34,6 @@ module.exports = {
     currTime : function () {
         var date = new Date();
         var options = { day: "2-digit", month: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit"};
-        return date.toLocaleDateString('de-DE', options);
+        return date.toLocaleDateString ('de-DE', options);
     }
 };
