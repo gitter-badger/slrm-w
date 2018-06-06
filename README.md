@@ -6,18 +6,38 @@
 [![Build Status](https://travis-ci.com/FlonTaut/slrm-w.svg?branch=master)](https://travis-ci.com/FlonTaut/slrm-w)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1e3810dfcafddb91cb6e/maintainability)](https://codeclimate.com/github/FlonTaut/slrm-w/maintainability)
 
-![Preview](https://github.com/FlonTaut/slrm-w/blob/master/res/preview_dark_v3.png?raw=true "Preview")
 
 ## Installing
 ### Using NodeJs
-Download the project and switch to the directory ```cd slrm-w ```
+
+Download the project
+```
+git clone https://github.com/FlonTaut/slrm-w
+```
+and switch to the directory with ```cd slrm-w ```
 
 ```javascript
 npm install
 npm start
 ```
 
-### Using Docker
+### Production
+To run Slurm Overview in production we recommend using <b>pm2</b>
+
+Install <b>pm2</b> globally with ```npm i -g pm2``` (requires sudo privileges)
+
+Add the following on top of index.js
+```
+#!/usr/bin/env nodejs
+```
+Run index.js with <b>pm2</b>
+````
+pm2 start index.js
+```
+You can find a full guide [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
+
+
+### Using Docker (not working yet 2018-06-06)
 
 Pull the docker image from dockerhub and then run it with the following command
 
@@ -44,6 +64,7 @@ squeue -o %i,%j,%u,%N,%C,%V,%T,%r > /home/USERNAME/slrm-w/squeue_text
 Paramters need to be seperated by comma ```,``` or ```index.js``` line ```24``` needs to be updated.
 
 #### Creating a cron job
+Decide how often you want the overview to be refreshed and then create a cron job.
 ```
 # crontab -e
 0,15,30,45 * * * * /home/USERNAME/export_queue.sh
@@ -55,7 +76,7 @@ Paramters need to be seperated by comma ```,``` or ```index.js``` line ```24``` 
 At first you need to update the ```export_queue.sh``` script from your users folder.
 Al list of all available parameters can be found [here](http://geco.mines.edu/prototype/How_do_I_manage_jobs/squeue.html)
 
-Next step is to update the ```<table>``` in ```view/index.html```.
+Next step is to update the ```<td>``` and ```<tr>``` in ```view/index.html```.
 
 #### Customizing
 The listening port is defined in ```app/config.js```
