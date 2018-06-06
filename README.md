@@ -32,7 +32,7 @@ Add the following on top of index.js
 #!/usr/bin/env nodejs
 ```
 Run index.js with <b>pm2</b>
-````
+```
 pm2 start index.js
 ```
 You can find a full guide [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
