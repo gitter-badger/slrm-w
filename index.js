@@ -18,5 +18,5 @@ var server = app.listen(config.app.port, function () {
 
 src.formatData();
 
-// Format the data.json every 15 Seconds
-setInterval(src.formatData, 14899);
+// Reread the squeue_text every config.app.refresh seconds (needs to be defined)
+setInterval(src.formatData, config.app.refresh);

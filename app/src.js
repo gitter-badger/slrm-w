@@ -26,7 +26,6 @@ module.exports = {
             jsonstring = JSON.stringify(result);
             fs.writeFile ('out/data.json', jsonstring, (err1) => {
                 if (err1) throw err1;
-                console.log('INFO: data format completed.');
             });
         });
     },
