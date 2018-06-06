@@ -3,9 +3,8 @@
 ### Please note that this project is currently in beta!
 
 #### Build Status
-[![Build Status](https://travis-ci.com/FlonTaut/slrm-w.svg?branch=master)](https://travis-ci.com/FlonTaut/slrm-w)
-[![Maintainability](https://api.codeclimate.com/v1/badges/1e3810dfcafddb91cb6e/maintainability)](https://codeclimate.com/github/FlonTaut/slrm-w/maintainability)
-
+[![Build Status](https://img.shields.io/travis/FlonTaut/slrm-w.svg?style=flat-square)](https://travis-ci.com/FlonTaut/slrm-w)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![Preview](https://github.com/FlonTaut/slrm-w/raw/master/res/preview.png "Preview")
 
 ## Installing
