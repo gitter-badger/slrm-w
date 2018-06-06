@@ -8,13 +8,14 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "prettier/prettier": "off",
         "accessor-pairs": "error",
         "array-bracket-newline": "off",
         "array-bracket-spacing": "off",
         "array-callback-return": "error",
         "array-element-newline": "off",
         "arrow-body-style": "error",
-        "arrow-parens": "error",
+        "arrow-parens": "off",
         "arrow-spacing": [
             "error",
             {
@@ -145,7 +146,7 @@ module.exports = {
         "no-lonely-if": "error",
         "no-loop-func": "error",
         "no-magic-numbers": "off",
-        "no-mixed-operators": "warn",
+        "no-mixed-operators": "off",
         "no-mixed-requires": "error",
         "no-multi-assign": "error",
         "no-multi-spaces": "error",
@@ -201,7 +202,7 @@ module.exports = {
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-useless-return": "error",
-        "no-undef": "warn",
+        "no-undef": "off",
         "no-var": "off",
         "no-void": "error",
         "no-warning-comments": "error",
@@ -230,7 +231,7 @@ module.exports = {
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
-        "quote-props": "error",
+        "quote-props": "off",
         "quotes": "off",
         "radix": "error",
         "require-await": "error",
@@ -243,10 +244,10 @@ module.exports = {
             "last"
         ],
         "sort-imports": "error",
-        "sort-keys": "error",
-        "sort-vars": "error",
-        "space-before-blocks": "error",
-        "space-before-function-paren": "error",
+        "sort-keys": "off",
+        "sort-vars": "off",
+        "space-before-blocks": "off",
+        "space-before-function-paren": "off",
         "space-in-parens": [
             "error",
             "never"
