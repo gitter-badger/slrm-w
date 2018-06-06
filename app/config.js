@@ -1,10 +1,13 @@
 const config = {
     app: {
-        port: 3000
+        port: 3000,
+        squeue: {
+            seperator: ','
+        }
     },
     web: {
-        bg-color: '#212529',
-        fn-color: 'white;'
+        bgcolor: '#212529',
+        fncolor: 'white;'
     }
 };
 module.exports = config;

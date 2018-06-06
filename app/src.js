@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+const config = require('./config');
 
 module.exports = {
     // Reads the squeue_text file and formats it to .json object and writes data.json
@@ -9,7 +10,7 @@ module.exports = {
             if (err) throw err;
 
             var header = data.split('\n');
-            var jobs = header[0].split(',');
+            var jobs = header[0].split(config.app.squeue.seperator);
             var result = [ ];
 
             // Reading data from the 2nd row
