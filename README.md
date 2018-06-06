@@ -57,12 +57,14 @@ On your host machine.
 ```bash
 touch export_queue.sh
 ```
-Add the following or similar to it:
+Add the following lines
 ```bash
 #!/bin/bash
 squeue -o %i,%j,%u,%N,%C,%V,%T,%r > /home/USERNAME/slrm-w/squeue_text
 ```
-Paramters need to be seperated by comma ```,``` or ```index.js``` line ```24``` needs to be updated.
+Or use the sample script in <b>scripts</b> folder
+
+Paramters need to be seperated by comma ```,``` or you need to update the ```config.app.squeue.seperator``` value in ```config.js```
 
 #### Creating a cron job
 Decide how often you want the overview to be refreshed and then create a cron job.
@@ -73,7 +75,7 @@ Decide how often you want the overview to be refreshed and then create a cron jo
 
 
 ### Customizing
-#### Customize the squeue output
+#### Customize the shown data (slurm jobs)
 You need to update the ```export_queue.sh``` script from your users folder.
 Al list of all available parameters can be found [here](http://geco.mines.edu/prototype/How_do_I_manage_jobs/squeue.html)
 
