@@ -5,7 +5,7 @@
 #### Build Status
 [![Build Status](https://travis-ci.com/FlonTaut/slrm-w.svg?branch=master)](https://travis-ci.com/FlonTaut/slrm-w)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1e3810dfcafddb91cb6e/maintainability)](https://codeclimate.com/github/FlonTaut/slrm-w/maintainability)
- 
+
 ![Preview](https://github.com/FlonTaut/slrm-w/raw/master/res/preview.png "Preview")
 
 ## Installing
@@ -74,10 +74,8 @@ Decide how often you want the overview to be refreshed and then create a cron jo
 
 ### Customizing
 #### Customize the squeue output
-At first you need to update the ```export_queue.sh``` script from your users folder.
+You need to update the ```export_queue.sh``` script from your users folder.
 Al list of all available parameters can be found [here](http://geco.mines.edu/prototype/How_do_I_manage_jobs/squeue.html)
-
-Next step is to update the ```<td>``` and ```<tr>``` in ```view/index.html```.
 
 #### Customizing
 The listening port is defined in ```app/config.js```
@@ -93,6 +91,7 @@ For now, please clone the Repo and only create pull requests for issues marked w
 A complete contribution guide will be added soon!
 
 ### License
+Copyright 2018 - Florian Taut
 slrm-w itself is licensed under the MIT license.
 
 Some node modules are licensed under other free software license.

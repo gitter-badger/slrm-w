@@ -2,8 +2,9 @@ const config = {
     app: {
         port: 3000
     },
-    data: {
-        path: '˜/'
+    web: {
+        bg-color: '#212529',
+        fn-color: 'white;'
     }
 };
 module.exports = config;

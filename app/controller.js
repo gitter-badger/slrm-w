@@ -18,7 +18,7 @@ angular.module('slrm').controller('slrmctrl', [ '$scope', '$http', '$timeout', f
         $http.get('/out/data.json')
             .then(function(response) {
                 $scope.data = response.data;
-
+                
                 return $timeout($scope.getData, $scope.getTimeLeftToRefresh());
             });
     };
