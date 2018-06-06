@@ -5,70 +5,42 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     </head>
-    <body style="background-color: #212529; color: white;">
+    <body style="background-color: #212529; color: white;" ng-app="slrm">
         <!-- Remove for production Release-->
-
         <div class="container">
-            <!--
-            <div class="alert alert-warning">
-            This project is under development and could still contain bugs.<br />
-            Report bugs here: <a href="https://github.com/FlonTaut/slrm-w">https://github.com/FlonTaut/slrm-w</a>
+                <!--
+                <div class="alert alert-warning">
+                This project is under development and could still contain bugs.<br />
+                Report bugs here: <a href="https://github.com/FlonTaut/slrm-w">https://github.com/FlonTaut/slrm-w</a>
+            </div>
+            -->
+        <div class="heady">
+            <h1>Slurm Weboverview beta</h1>
         </div>
-        -->
-    <div class="heady">
-        <h1>Slurm Weboverview beta</h1>
-    </div>
 
-    <!--<div class="container">
-        <p>
-            This page is automatically refreshing every 5 minutes!
-        </p>
-    </div>-->
-    <table class="table table-dark">
-        <thead>
-            <!-- Need to be customized to data.json's format -->
-            <th scope="col">ID</th>
-            <th scope="col">JOBNAME</th>
-            <th scope="col">USER</th>
-            <th scope="col">NODE</th>
-            <th scope="col">CPUS</th>
-            <th scope="col">TIME</th>
-            <th scope="col">STATE</th>
-            <th scope="col">REASON</th>
-        </thead>
-        <!-- Customize to fit data.json's format-->
-        <tbody ng-app="slrm" ng-controller="slrmctrl">
-            <tr ng-repeat="x in data">
-                <td>{{ x.JOBID }}</td>
-                <td>{{ x.NAME }}</td>
-                <td>{{ x.USER }}</td>
-                <td>{{ x.NODELIST }}</td>
-                <td>{{ x.CPUS }}</td>
-                <td>{{ x.SUBMIT_TIME }}</td>
-                <td>{{ x.STATE }}</td>
-                <td>{{ x.REASON }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <table class="table table-dark" ng-controller="slrmctrl">
+            <thead>
+                <tr ng-repeat="x in data | limitTo:1">
+                    <th scope="col" ng-repeat="(key, val) in x">{{ key }}</th>
+                </tr>
+            </thead>
 
-    </div>
+            <tbody ng-app="slrm" ng-controller="slrmctrl">
+                <tr ng-repeat="x in data">
+                    <td ng-repeat="(key, val) in x">{{ val }}</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <!--
-    <footer class="footer">
-      <div class="container">
-        <span class="text-muted">&copy; 2018 Florian Taut 😎</span><br />
-        <span class="text-muted pull-right">Last refresh at </span><span class="text-muted" id="refreshtime"></span>
-      </div>
-    </footer>
-    -->
+        </div>
 
-    <script>
-        var date = new Date();
-        var options = { day: "2-digit", month: "2-digit", year: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit"};
-        document.getElementById("refreshtime").innerHTML = date.toLocaleDateString('de-DE', options);
-    </script>
+        <footer class="footer">
+          <div class="container">
+            <span class="text-muted">&copy; 2018 Florian Taut 😎</span><br />
+          </div>
+        </footer>
 
-    <script type="text/javascript" src="/node/angular.js"></script>
-    <script type="text/javascript" src="/app/controller.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/node/angular.js"></script>
+        <script type="text/javascript" src="/app/controller.js" charset="utf-8"></script>
     </body>
-    </html>
+</html>
