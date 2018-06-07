@@ -5,7 +5,7 @@
 #### Build Status
 [![Build Status](https://img.shields.io/travis/FlonTaut/slrm-w.svg?style=flat-square)](https://travis-ci.com/FlonTaut/slrm-w)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) 
-[![Greenkeeper badge](https://badges.greenkeeper.io/FlonTaut/slrm-w.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/FlonTaut/slrm-w.svg)](https://greenkeeper.io/) [![Join the chat at https://gitter.im/slrm-w/Lobby](https://badges.gitter.im/slrm-w/Lobby.svg)](https://gitter.im/slrm-w/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ![Preview](https://github.com/FlonTaut/slrm-w/raw/master/res/preview.png "Preview")
 
 ## Installing
